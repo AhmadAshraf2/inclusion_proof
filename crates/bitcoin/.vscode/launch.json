@@ -1,0 +1,139 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'bitcoin'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=bitcoin"
+                ],
+                "filter": {
+                    "name": "bitcoin",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'bitcoin'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=bitcoin",
+                    "--package=bitcoin"
+                ],
+                "filter": {
+                    "name": "bitcoin",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'bitcoin'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=bitcoin",
+                    "--package=bitcoin"
+                ],
+                "filter": {
+                    "name": "bitcoin",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example 'parse-transaction'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--example=parse-transaction",
+                    "--package=bitcoin"
+                ],
+                "filter": {
+                    "name": "parse-transaction",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in example 'parse-transaction'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--example=parse-transaction",
+                    "--package=bitcoin"
+                ],
+                "filter": {
+                    "name": "parse-transaction",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example 'run-proof'",
+            "cargo": {
+                "args": [
+                    "+nightly",
+                    "build",
+                    "--example=run-proof",
+                    "--package=bitcoin"
+                ],
+                "filter": {
+                    "name": "run-proof",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in example 'run-proof'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--example=run-proof",
+                    "--package=bitcoin"
+                ],
+                "filter": {
+                    "name": "run-proof",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
